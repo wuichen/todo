@@ -1,13 +1,13 @@
 body {
     
 	font-size: 14px;
-	background: #eeeeee;
-	color: #333333;
+	background: #E8E8E8;
+	color: black;
     margin-top: 30px; 
     font-family: "Comic Sans MS", cursive, sans-serif
 }
 #todoapp {
-	background: #fff;
+	background: white;
 	padding: 20px;
     margin: 0 auto;
 	margin-bottom: 40px;
@@ -114,16 +114,6 @@ body {
     color: grey;
     text-decoration: line-through;
 }
-
-/*#todo-list .destroy {
-	position: absolute;
-	right: 5px;
-	top: 20px;
-	display: none;
-	cursor: pointer;
-	width: 20px;
-	height: 20px;
-}*/
 
 #last {
 	display: none;
