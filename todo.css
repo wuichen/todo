@@ -1,0 +1,144 @@
+body {
+    
+	font-size: 14px;
+	background: #eeeeee;
+	color: #333333;
+    margin-top: 30px; 
+    font-family: "Comic Sans MS", cursive, sans-serif
+}
+#todoapp {
+	background: #fff;
+	padding: 20px;
+    margin: 0 auto;
+	margin-bottom: 40px;
+    width: 600px;
+    box-shadow: 10px 10px 5px #888888;
+}
+#top{
+    border-bottom: solid #D0D0D0 1px;
+}
+#dateDiv{
+    color: #6699FF;
+}
+
+#new-todo{
+    margin-right:14px;
+    width: 50%;
+}
+#datetimepicker,.datetime{
+    width:67%;
+}
+
+.datetime{
+    
+    color: green
+}
+
+#new-todo,#datetimepicker{
+    
+    color: grey;
+    //font-size: 20px;
+	background : none;
+	border : none;
+    padding-bottom:10px;
+        font-family: "Comic Sans MS", cursive, sans-serif
+
+}
+/*#todoapp input[type="text"] {
+	width: 350px;
+	line-height: 1.4em;
+	padding: 6px;
+}*/
+#plusIcon{
+    cursor: pointer;
+}
+#trashIcon{
+    cursor: pointer;
+    margin-top: 8px;
+    margin-left:64%;
+}
+
+.rightAlign{
+	float: right;
+}
+.rightAlign img{
+    margin-left:15px;
+}
+.editButton{
+    
+    cursor: pointer;
+}
+#main {
+	display: none;
+}
+
+#todo-count{
+    font-size: 18pt;
+    margin: 10px;
+}
+#todo-list {
+	margin: 10px 0;
+	padding: 0;
+	list-style: none;
+}
+
+#todo-list li {
+	padding: 18px 20px 18px 0;
+	position: relative;
+	//font-size: 24px;
+	border-bottom: 1px dashed #D0D0D0;
+}
+
+#todo-list li:last-child {
+	border-bottom: none;
+}
+
+#todo-list li .edit {
+    display: none;
+}
+
+#todo-list li.editing .view {
+	display: none;
+}
+#todo-list li.editing .edit {
+	display: inline-block;
+	width: 444px;
+	margin: 0;
+}
+#todo-list li.done label {
+	color: grey;
+	text-decoration: line-through;
+}
+
+#todo-list li .done-true  {
+    color: grey;
+    text-decoration: line-through;
+}
+
+/*#todo-list .destroy {
+	position: absolute;
+	right: 5px;
+	top: 20px;
+	display: none;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+}*/
+
+#last {
+	display: none;
+	margin: 0 -20px -20px -20px;
+	overflow: hidden;
+	color: grey;
+	background: #99CCFF;
+	border-top: 1px solid #ededed;
+	padding: 0 20px;
+	height: 37px;
+}
+#markAll{
+    margin-top: 7px;
+    float:left;
+}
+
+
+
