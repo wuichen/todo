@@ -11,24 +11,21 @@ module.exports = function(grunt){
 
         cssmin: {
             build: {
-                src: 'todo.css',
-                dest: 'todo.min.css'
+                src: 'css/todo.css',
+                dest: 'css/todo.min.css'
             }
         },
 
        
 
         watch: {
-            html: {
-                files: ['todo.html'],
-                tasks: ['htmlhint']
-            },
+            
             js: {
-                files: ['todo.js'],
+                files: ['js/todo.js'],
                 tasks: ['uglify']
             },
             css: {
-                files: ['todo.css'],
+                files: ['css/todo.css'],
                 tasks: ['cssmin']
             }
         },
@@ -38,7 +35,8 @@ module.exports = function(grunt){
         uglify: {
             build: {
                 files: {
-                    'todo.min.js': ['todo.js']
+                    'js/todo.min.js': ['js/todo.js'],
+					'js/time.min.js':['js/time.js']
                 }
             }
         }
@@ -46,6 +44,6 @@ module.exports = function(grunt){
     });
 
     grunt.registerTask('default',   ['cssmin','uglify']);
-    grunt.registerTask('buildcss',  ['sass', 'cssc', 'cssmin']);
+    /*grunt.registerTask('buildcss',  ['cssmin']);*/
 
 };
