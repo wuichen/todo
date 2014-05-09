@@ -53,7 +53,7 @@ General Style
 */
 body {
 	font-size: 14px;
-	background: #EEE;
+	background: #eee;
 	color: #000;
     margin-top: 30px;
     font-family: "Comic Sans MS", cursive, sans-serif
@@ -73,7 +73,7 @@ img{
 General App Area
 */
 #todoapp {
-	background: white;
+	background: #fff;
     margin: 0 auto;
     width: 600px;
     padding: 20px;
@@ -113,7 +113,7 @@ Add new task interface
 }
 
 #datetimepicker{
-	width:122px;
+	width: 122px;
 }
 
 /*****************************************************/
