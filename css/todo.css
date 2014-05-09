@@ -1,15 +1,73 @@
-/*
-General Style
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
 */
-body {   
-	font-size: 14px;
-	background: #E8E8E8;
-	color: black;
-    margin-top: 30px; 
-    font-family: "Comic Sans MS", cursive, sans-serif
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 /******************************************************/
 
+/*
+General Style
+*/
+body {
+	font-size: 14px;
+	background: #EEE;
+	color: #000;
+    margin-top: 30px;
+    font-family: "Comic Sans MS", cursive, sans-serif
+}
+
+input{
+	border-radius: 5px;
+}
+
+img{
+	width: 20px;
+	height: 20px;
+}
+/******************************************************/
 
 /*
 General App Area
@@ -18,70 +76,66 @@ General App Area
 	background: white;
     margin: 0 auto;
     width: 600px;
+    padding: 20px;
     box-shadow: 10px 10px 5px #888888;
 }
 
-#content{
-    margin: 20px;
-}
 /*****************************************************/
-
 
 /*
 Header of the App
 */
 #dateDiv{
-    color: #6699FF;
+    color: #69f;
 }
 #top{
     border-bottom: solid #D0D0D0 1px;
 }
 #todo-count{
     font-size: 18pt;
-    margin: 10px;
+    margin: 10px 0px 10px 0px;
 }
+
 /*****************************************************/
 
 /*
 Add new task interface
 */
 
-#new-todo,#datetimepicker{    
-    color: grey;
-	border : none;
-	margin-bottom:10px;
-	width:66%;
+#new-todo,.time{
+    color: #000;
+	margin-bottom: 10px;
+	display: inline-block;
 }
 
 #new-todo{
-    margin-right:14px;
-    width: 50%;
+    width: 300px;
 }
 
+#datetimepicker{
+	width:122px;
+}
 
 /*****************************************************/
 
 /*
 Right-floating Icons Set
 */
+
+.time{
+	float:right;
+}
+
+.time img{
+	margin-left: 10px;
+}
+
 #plusIcon, .editButton, #trashIcon{
     cursor: pointer;
 }
 
-.rightAlign{
-	float: right;
-}
-.rightAlign img{
-    margin-left:15px;
-}
-
-.datetime{  
-    color: green;
-}
-
-#trashIcon{
-    margin-top: 8px;
-    margin-left:64%;
+.datetime{
+    color: #080;
 }
 
 /******************************************************/
@@ -90,13 +144,9 @@ Right-floating Icons Set
 /*
 To-do List Area
 */
-#todo-list {
-	padding: 0;
-	list-style: none;
-}
 
 .todos {
-	padding: 18px 20px 18px 0;
+	padding: 18px 0px 18px 0;
 }
 
 .todos:last-child {
@@ -113,34 +163,33 @@ To-do List Area
 .todos.editing .edit {
 	display: inline-block;
 }
-.todos .done label {
-	color: grey;
-	text-decoration: line-through;
-}
 
 .todos .done-true  {
-    color: grey;
+    color: #aaa;
     text-decoration: line-through;
 }
+
+.changeDateTime{
+	width: 122px;
+	margin-left: 255px;
+	display: inline;
+}
+
+
 /********************************************************************************/
-
-
 
 /*
 Footer Area
 */
 #last {
+	width: 600px;
+	height: 20px;
+	padding: 20px;
+	background-color: #9cf;
 	margin: 0 -20px -20px -20px;
-	overflow: hidden;
-	color: grey;
-	background: #99CCFF;
-	border-top: 1px solid #ededed;
-	padding: 0 20px;
-	height: 37px;
-}
-#markAll{
-    margin-top: 7px;
-    float:left;
+	border-top: solid #D0D0D0 1px;
 }
 
-
+#trashIcon{
+	float: right;
+}
