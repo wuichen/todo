@@ -13,10 +13,10 @@
 	<!--<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
 
 	<!--myScript-->
-	<script src="js/todo.min.js"></script>
+	<script src="js/todo.js"></script>
 
 	<!--myStyleSheet-->
-	<link rel="stylesheet" href="css/todo.css">
+	<link rel="stylesheet" href="css/todo.css"/>
 
 	<!--dateTimeScripts-->
 	<link rel="stylesheet" type="text/css" href="datetimepicker/jquery.datetimepicker.css"/>
@@ -35,14 +35,13 @@
 
 				<div id="top">
 					<div ng-show="hasTodo()" id="todo-count">You have {{remaining()}} thing(s) to do!</div>
-					<div>
+					<form ng-submit="submit()">
 						<input id="new-todo" type="text" ng-model="todoText" placeholder="Type here to add todo list!"/>
 						<div class="time">
-							<input  id="datetimepicker" type="text" ng-model="newDateTime" placeholder=" Set due time"/>
-							<a href="" id="addImage" ng-click="addTodo()">add</a>
-							<!--<img src="image/add.png" id="plusIcon" ng-click="addTodo()" alt="add"/>-->
+							<input id="datetimepicker" type="text" ng-model="newDateTime" placeholder="Set due time"/>
+							<input type="submit" id="submit" value="Submit"/>
 						</div>
-					</div>
+					</form>
 				</div>
 
 			<div id="main">

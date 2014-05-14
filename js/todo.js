@@ -18,7 +18,7 @@ myApp.controller('todoController', ['$scope',
         //datetime try
         $scope.newDateTime = "";
         $('#datetimepicker').datetimepicker({
-            onChangeDateTime: function (dp, $input) {
+            onChangeDateTime: function(dp, $input) {
                 $scope.newDateTime = $input.val()
                 //alert(newDateTime)
             }
@@ -26,9 +26,8 @@ myApp.controller('todoController', ['$scope',
 
         $scope.markAll = false;
 
-        $scope.addTodo = function () {
-
-            if ($scope.todoText) {
+        $scope.submit = function(){
+            if($scope.todoText){
                 $scope.todos.push({
                     text: $scope.todoText,
                     done: false,
@@ -38,16 +37,30 @@ myApp.controller('todoController', ['$scope',
                 localStorage.setItem('todos', JSON.stringify($scope.todos));
                 $scope.newDateTime = "";
             }
-        };
-        $scope.hasTodo = function () {
+        }
+        /*
+        $scope.addTodo = function() {
+
+            if ($scope.todoText){
+                $scope.todos.push({
+                    text: $scope.todoText,
+                    done: false,
+                    dateTime: $scope.newDateTime
+                });
+                $scope.todoText = '';
+                localStorage.setItem('todos', JSON.stringify($scope.todos));
+                $scope.newDateTime = "";
+            }
+        };*/
+        $scope.hasTodo = function(){
             return $scope.todos.length > 0;
         }
-        $scope.update = function (done) {
+        $scope.update = function(done){
             localStorage.setItem('todos', JSON.stringify($scope.todos));
 
         }
-		
-        $scope.toggleEditMode = function (event, todo) {
+
+        $scope.toggleEditMode = function(event, todo) {
             $(event.target).closest('li').toggleClass('editing');
             localStorage.setItem('todos', JSON.stringify($scope.todos));
 
@@ -58,9 +71,9 @@ myApp.controller('todoController', ['$scope',
             });
         };
 
-        $scope.remaining = function () {
+        $scope.remaining = function(){
             var count = 0;
-            angular.forEach($scope.todos, function (todo) {
+            angular.forEach($scope.todos, function(todo){
                 if (!todo.done) {
                     count++;
                 }
@@ -68,21 +81,21 @@ myApp.controller('todoController', ['$scope',
             return count;
         };
 
-        $scope.hasDone = function () {
+        $scope.hasDone = function(){
             return ($scope.todos.length != $scope.remaining());
         }
 
-        $scope.toggleMarkAll = function () {
-            angular.forEach($scope.todos, function (todo) {
+        $scope.toggleMarkAll = function(){
+            angular.forEach($scope.todos, function(todo){
                 todo.done = $scope.markAll;
             });
             localStorage.setItem('todos', JSON.stringify($scope.todos));
         };
 
-        $scope.clear = function () {
+        $scope.clear = function(){
             var oldTodos = $scope.todos;
             $scope.todos = [];
-            angular.forEach(oldTodos, function (todo) {
+            angular.forEach(oldTodos, function(todo){
                 if (!todo.done) {
                     $scope.todos.push(todo);
                 }
