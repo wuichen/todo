@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -51,33 +51,31 @@ table {
 /*
 General Style
 */
+
 body {
 	font-size: 14px;
 	background: #eee;
 	color: #000;
     margin-top: 30px;
-    font-family: "Comic Sans MS", cursive, sans-serif
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 input{
 	border-radius: 5px;
 }
 
-img{
-	width: 20px;
-	height: 20px;
-}
 /******************************************************/
 
 /*
 General App Area
 */
+
 #todoapp {
 	background: #fff;
     margin: 0 auto;
     width: 600px;
     padding: 20px;
-    box-shadow: 10px 10px 5px #888888;
+    box-shadow: 10px 10px 5px #888;
 }
 
 /*****************************************************/
@@ -85,15 +83,18 @@ General App Area
 /*
 Header of the App
 */
+
 #dateDiv{
     color: #69f;
 }
+
 #top{
-    border-bottom: solid #D0D0D0 1px;
+    border-bottom: solid #d0d0d0 1px;
 }
+
 #todo-count{
-    font-size: 18pt;
-    margin: 10px 0px 10px 0px;
+    font-size: 18px;
+    padding: 10px 0 10px 0;
 }
 
 /*****************************************************/
@@ -104,8 +105,10 @@ Add new task interface
 
 #new-todo,.time{
     color: #000;
-	margin-bottom: 10px;
-	display: inline-block;
+}
+
+#datetimepicker, .datetime{
+	vertical-align: top;
 }
 
 #new-todo{
@@ -116,6 +119,10 @@ Add new task interface
 	width: 122px;
 }
 
+#addImage{
+	background: url("../image/add.png");
+}
+
 /*****************************************************/
 
 /*
@@ -123,56 +130,65 @@ Right-floating Icons Set
 */
 
 .time{
-	float:right;
-}
-
-.time img{
-	margin-left: 10px;
-}
-
-#plusIcon, .editButton, #trashIcon{
-    cursor: pointer;
+	float: right;
 }
 
 .datetime{
     color: #080;
 }
 
-/******************************************************/
+.editImage{
+	background: url("../image/edit.png");
+}
 
+#trashImage{
+	background: url("../image/trash_close.png");
+}
+
+#addImage,.editImage,#trashImage{
+	margin-left: 10px;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	text-indent: -9999px;
+	background-size: 20px 20px;
+	background-repeat: no-repeat;
+}
+
+/******************************************************/
 
 /*
 To-do List Area
 */
 
-.todos {
-	padding: 18px 0px 18px 0;
+.todos{
+	padding: 18px 0 18px 0;
 }
 
-.todos:last-child {
+.todos:last-child{
 	border-bottom: none;
 }
 
-.todos .edit {
+.todos .edit{
     display: none;
 }
 
-.todos.editing .view {
+.todos.editing .view{
 	display: none;
 }
-.todos.editing .edit {
-	display: inline-block;
+
+.todos.editing .edit{
+	display: inline;
 }
 
-.todos .done-true  {
+.todos .done-true{
     color: #aaa;
     text-decoration: line-through;
 }
 
 .changeDateTime{
+	float: right;
 	width: 122px;
-	margin-left: 255px;
-	display: inline;
 }
 
 
@@ -181,15 +197,16 @@ To-do List Area
 /*
 Footer Area
 */
+
 #last {
 	width: 600px;
 	height: 20px;
 	padding: 20px;
 	background-color: #9cf;
 	margin: 0 -20px -20px -20px;
-	border-top: solid #D0D0D0 1px;
+	border-top: solid #d0d0d0 1px;
 }
 
-#trashIcon{
+#trashImage{
 	float: right;
 }

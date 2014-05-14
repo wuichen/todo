@@ -34,16 +34,18 @@
 			<div id="dateDiv"></div>
 
 				<div id="top">
-
 					<div ng-show="hasTodo()" id="todo-count">You have {{remaining()}} thing(s) to do!</div>
+					<div>
 						<input id="new-todo" type="text" ng-model="todoText" placeholder="Type here to add todo list!"/>
 						<div class="time">
-							<input  id="datetimepicker" type="text" ng-model="newDateTime" placeholder=" Set due time">
-							<img src="image/add.png" id="plusIcon" ng-click="addTodo()" alt="add"/>
+							<input  id="datetimepicker" type="text" ng-model="newDateTime" placeholder=" Set due time"/>
+							<a href="" id="addImage" ng-click="addTodo()">add</a>
+							<!--<img src="image/add.png" id="plusIcon" ng-click="addTodo()" alt="add"/>-->
 						</div>
+					</div>
 				</div>
 
-			<div id="main" style="display: block;">
+			<div id="main">
 				<ul id="todo-list">
 					<li class="todos" ng-repeat="todo in todos track by $index">
 						<input type="checkbox" ng-model="todo.done" ng-change="update()"/>
@@ -51,23 +53,24 @@
 
 						<div class="time">
 							<span class="view datetime" ng-class="{'done-true': !!todo.done}">{{todo.dateTime}}</span>
-
-							<img class="editButton" ng-click="toggleEditMode($event,todo)" src="image/edit.png" alt="edit logo"/>
+							<a href="" class="editImage" ng-click="toggleEditMode($event,todo)">edit</a>
+							<!--<img class="editButton" ng-click="toggleEditMode($event,todo)" src="image/edit.png" alt="edit logo"/>-->
 						</div>
 
 						<div class="edit">
 							<input class="changeTask" type="text" ng-model="todo.text"/>
-							<input class="changeDateTime" type="text" value={{todo.dateTime}}>
+							<input class="changeDateTime" type="text" value="{{todo.dateTime}}"/>
 						</div>
 					</li>
 				</ul>
 			</div>
 
-			<div id="last" style="display: block;" ng-show="hasTodo()">
+			<div id="last" ng-show="hasTodo()">
 				<div id="markAll">
 					<input id="toggle-all" type="checkbox" ng-model="markAll" ng-change="toggleMarkAll()"/>
 					<label for="toggle-all">Mark all as complete</label>
-					<img id="trashIcon" src="image/trash_close.png" ng-click="clear()" ng-show="hasDone()" alt="trash">
+					<a href="" id="trashImage" ng-click="clear()" ng-show="hasDone()">trash</a>
+					<!--<img id="trashIcon" src="image/trash_close.png" ng-click="clear()" ng-show="hasDone()" alt="trash">-->
 				</div>
 			</div>
   		</div>
